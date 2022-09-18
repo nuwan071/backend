@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Attendance\AttendanceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+//Import attendance excel
+Route::post('import/excel', [AttendanceController::class, "createAttendance"]);
+//Employee attendance details
+Route::get('get/employee-details', [AttendanceController::class, "getAttendance"]);
+//List of attendance
+Route::get('attendance/list', [AttendanceController::class, "attendanceList"]);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
