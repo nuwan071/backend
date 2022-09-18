@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Attendance\AttendanceController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +21,8 @@ Route::post('import/excel', [AttendanceController::class, "createAttendance"]);
 Route::get('get/employee-details', [AttendanceController::class, "getAttendance"]);
 //List of attendance
 Route::get('attendance/list', [AttendanceController::class, "attendanceList"]);
+
+//get duplicate values of array
+Route::post('get/duplicate-value', [IndexController::class, "getDuplicateValues"]);
 
 
