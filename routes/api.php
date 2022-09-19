@@ -24,5 +24,7 @@ Route::get('attendance/list', [AttendanceController::class, "attendanceList"]);
 
 //get duplicate values of array
 Route::post('get/duplicate-value', [IndexController::class, "getDuplicateValues"]);
+//array group by value
+Route::post('array/group-by-owners', [IndexController::class, "groupByOwners"]);
 
 
