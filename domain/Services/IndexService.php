@@ -19,10 +19,10 @@ class IndexService
     public function duplicateValue($array)
     {
         // remove duplicate value from array
-        $unique     = array_unique($array); 
+        $unique = array_unique($array);
 
         //compares the keys of more than one
-        $diffKeys   = array_diff_key($array, $unique);
+        $diffKeys = array_diff_key($array, $unique);
 
         $output = array_unique($diffKeys);
 
